@@ -18,10 +18,29 @@ const modalConfigs = [
 
 let activeModal = null;
 let lastModalTrigger = null;
+const modalHashMap = {
+  "#about-modal": "about-modal",
+  "#gioi-thieu": "about-modal",
+  "#contact-modal": "contact-modal"
+};
 
 if (featureHeading) {
   featureHeading.innerHTML = "M\u1ed9t giao di\u1ec7n r\u00f5 r\u00e0ng, hi\u1ec7n \u0111\u1ea1i v\u00e0 s\u1eb5n s\u00e0ng cho m\u1ecdi nhu c\u1ea7u gi\u1ea3ng&nbsp;d\u1ea1y";
 }
+
+const getModalConfigById = (modalId) => {
+  return modalConfigs.find((config) => config.modal && config.modal.id === modalId) || null;
+};
+
+const clearModalHash = () => {
+  const currentHash = window.location.hash;
+
+  if (!modalHashMap[currentHash]) {
+    return;
+  }
+
+  window.history.replaceState(null, "", window.location.pathname + window.location.search);
+};
 
 const closeActiveModal = () => {
   if (!activeModal) {
@@ -35,6 +54,7 @@ const closeActiveModal = () => {
   const triggerToFocus = lastModalTrigger;
   activeModal = null;
   lastModalTrigger = null;
+  clearModalHash();
 
   if (triggerToFocus) {
     triggerToFocus.focus();
@@ -64,6 +84,24 @@ const openModal = (config, trigger) => {
   }
 };
 
+const syncModalWithHash = () => {
+  const modalId = modalHashMap[window.location.hash];
+
+  if (!modalId) {
+    if (activeModal) {
+      closeActiveModal();
+    }
+
+    return;
+  }
+
+  const config = getModalConfigById(modalId);
+
+  if (config) {
+    openModal(config);
+  }
+};
+
 modalConfigs.forEach((config) => {
   config.triggers.forEach((trigger) => {
     trigger.addEventListener("click", (event) => {
@@ -85,6 +123,9 @@ document.addEventListener("keydown", (event) => {
     closeActiveModal();
   }
 });
+
+window.addEventListener("hashchange", syncModalWithHash);
+syncModalWithHash();
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
