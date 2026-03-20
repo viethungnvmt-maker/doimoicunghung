@@ -1207,7 +1207,8 @@ a {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.about-modal.is-open {
+.about-modal.is-open,
+.about-modal:target {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1216,6 +1217,7 @@ a {
 .about-modal__backdrop {
   position: absolute;
   inset: 0;
+  display: block;
   border: 0;
   background:
     radial-gradient(circle at 20% 15%, rgba(52, 173, 161, 0.14), transparent 22%),
@@ -1241,7 +1243,8 @@ a {
   transition: transform 0.34s ease;
 }
 
-.about-modal.is-open .about-modal__dialog {
+.about-modal.is-open .about-modal__dialog,
+.about-modal:target .about-modal__dialog {
   transform: translateY(0) scale(1);
 }
 

@@ -35,7 +35,10 @@ const closeActiveModal = () => {
   const triggerToFocus = lastModalTrigger;
   activeModal = null;
   lastModalTrigger = null;
-  triggerToFocus?.focus();
+
+  if (triggerToFocus) {
+    triggerToFocus.focus();
+  }
 };
 
 const openModal = (config, trigger) => {
@@ -51,11 +54,14 @@ const openModal = (config, trigger) => {
   }
 
   activeModal = modal;
-  lastModalTrigger = trigger ?? null;
+  lastModalTrigger = trigger || null;
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
-  dialog?.focus();
+
+  if (dialog) {
+    dialog.focus();
+  }
 };
 
 modalConfigs.forEach((config) => {
@@ -67,7 +73,10 @@ modalConfigs.forEach((config) => {
   });
 
   config.closeButtons.forEach((button) => {
-    button.addEventListener("click", closeActiveModal);
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      closeActiveModal();
+    });
   });
 });
 
@@ -79,7 +88,7 @@ document.addEventListener("keydown", (event) => {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    if (link.matches("[data-about-trigger], [data-contact-trigger]")) {
+    if (link.matches("[data-about-trigger], [data-contact-trigger], [data-about-close], [data-contact-close]")) {
       return;
     }
 
