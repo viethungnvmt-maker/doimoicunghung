@@ -27,7 +27,16 @@
 
       <nav class="site-nav" aria-label="Điều hướng chính">
         <a href="#ung-dung">Ứng dụng</a>
-        <a href="#about-modal" data-about-trigger="true" aria-controls="about-modal">Giới thiệu</a>
+        <button
+          type="button"
+          class="site-nav__button"
+          data-about-trigger="true"
+          aria-controls="about-modal"
+          aria-haspopup="dialog"
+          onclick="var modal=document.getElementById('about-modal'); if(modal){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); }"
+        >
+          Giới thiệu
+        </button>
         <a href="https://zalo.me/0363831337" class="nav-cta" target="_blank" rel="noopener noreferrer" data-contact-trigger="true" aria-controls="contact-modal">Liên hệ</a>
       </nav>
     </header>
@@ -234,10 +243,22 @@
   </div>
 
   <div class="about-modal" id="about-modal" aria-hidden="true">
-    <a class="about-modal__backdrop" href="#top" aria-label="Đóng cửa sổ giới thiệu" data-about-close></a>
+    <button
+      class="about-modal__backdrop"
+      type="button"
+      aria-label="Đóng cửa sổ giới thiệu"
+      data-about-close
+      onclick="var modal=document.getElementById('about-modal'); if(modal){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); }"
+    ></button>
 
     <div class="about-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="about-modal-title" tabindex="-1">
-      <a class="about-modal__close" href="#top" aria-label="Đóng" data-about-close>&times;</a>
+      <button
+        class="about-modal__close"
+        type="button"
+        aria-label="Đóng"
+        data-about-close
+        onclick="var modal=document.getElementById('about-modal'); if(modal){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); }"
+      >&times;</button>
 
       <div class="about-modal__content">
         <div class="about-modal__copy">

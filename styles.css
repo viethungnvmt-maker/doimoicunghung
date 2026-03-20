@@ -134,7 +134,23 @@ a {
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.site-nav a:hover {
+.site-nav__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  font: inherit;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.site-nav a:hover,
+.site-nav__button:hover {
   background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
   transform: translateY(-1px);
@@ -1732,6 +1748,7 @@ a {
 
   .brand-copy span,
   .site-nav a,
+  .site-nav__button,
   .hero-description,
   .stat-card span,
   .feature-card p {
