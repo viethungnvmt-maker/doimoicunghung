@@ -868,6 +868,30 @@ a {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
+.feature-card-nls__avatar--image {
+  background: radial-gradient(circle at 50% 40%, rgba(123, 216, 255, 0.28), rgba(15, 32, 47, 0) 72%);
+  box-shadow: none;
+}
+
+.feature-card-nls__avatar--image::before {
+  inset: -10px;
+  border-color: rgba(145, 242, 255, 0.18);
+  background: radial-gradient(circle, rgba(136, 244, 255, 0.18), transparent 72%);
+}
+
+.feature-card-nls__avatar-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 84px;
+  height: 84px;
+  border-radius: 28px;
+  object-fit: cover;
+  filter:
+    drop-shadow(0 18px 30px rgba(7, 22, 27, 0.28))
+    drop-shadow(0 0 24px rgba(120, 236, 242, 0.22));
+}
+
 .feature-card-nls__chips {
   position: absolute;
   right: 18px;
@@ -2249,6 +2273,16 @@ a {
     height: 54px;
     border-radius: 16px;
     font-size: 0.88rem;
+  }
+
+  .feature-card-nls__avatar--image::before {
+    inset: -7px;
+  }
+
+  .feature-card-nls__avatar-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
   }
 
   .feature-card-nls__chips {
