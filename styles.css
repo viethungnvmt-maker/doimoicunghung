@@ -934,6 +934,62 @@ a {
   transition: transform 0.25s ease;
 }
 
+.feature-card-cv7991 {
+  background:
+    linear-gradient(180deg, rgba(28, 24, 18, 0.98), rgba(15, 12, 9, 0.98)),
+    radial-gradient(circle at top left, rgba(255, 190, 92, 0.2), transparent 34%);
+}
+
+.feature-card-cv7991 .feature-card-nls__visual {
+  background:
+    radial-gradient(circle at top left, rgba(255, 223, 154, 0.36), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 157, 77, 0.22), transparent 36%),
+    linear-gradient(180deg, #6d4b18 0%, #52340e 48%, #24170b 100%);
+}
+
+.feature-card-cv7991 .feature-card-nls__badge {
+  background: linear-gradient(135deg, rgba(255, 245, 223, 0.98), rgba(255, 201, 103, 0.98));
+}
+
+.feature-card-cv7991 .feature-card-nls__sheet-header {
+  background: linear-gradient(135deg, #e77a26, #c85a12);
+}
+
+.feature-card-cv7991 .feature-card-nls__sheet-title {
+  background: linear-gradient(90deg, #5a3011, #9b5a20);
+}
+
+.feature-card-cv7991 .feature-card-nls__sheet-grid span {
+  border-color: rgba(117, 62, 21, 0.14);
+  background: linear-gradient(180deg, rgba(240, 169, 95, 0.24), rgba(202, 120, 46, 0.12));
+}
+
+.feature-card-cv7991 .feature-card-nls__avatar {
+  background: linear-gradient(180deg, rgba(248, 176, 88, 0.96), rgba(188, 104, 27, 0.96));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.14),
+    0 18px 30px rgba(28, 16, 8, 0.28),
+    0 0 34px rgba(255, 196, 110, 0.24);
+}
+
+.feature-card-cv7991 .feature-card-nls__avatar::before {
+  border-color: rgba(255, 210, 140, 0.22);
+  background: radial-gradient(circle, rgba(255, 216, 151, 0.28), transparent 68%);
+}
+
+.feature-card-cv7991 .feature-card-nls__avatar-core {
+  background: linear-gradient(180deg, #4b240d, #2e1408);
+  letter-spacing: 0.04em;
+}
+
+.feature-card-cv7991 .feature-card-nls__chips span {
+  background: rgba(36, 20, 8, 0.62);
+}
+
+.feature-card-cv7991 .feature-card-nls__pill {
+  background: linear-gradient(135deg, #b7631b, #8b4410);
+}
+
 .feature-card-gvcn {
   padding: 0;
   overflow: hidden;
