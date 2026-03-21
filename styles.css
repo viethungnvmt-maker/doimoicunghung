@@ -1940,14 +1940,20 @@ a {
   position: absolute;
   top: 18px;
   right: 18px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
+  padding: 0;
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
   font-size: 1.8rem;
   line-height: 1;
+  text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
 }
