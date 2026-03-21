@@ -568,15 +568,15 @@ a {
 .feature-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 22px;
+  gap: 18px;
   align-items: start;
 }
 
 .feature-group {
   display: grid;
-  gap: 18px;
-  padding: 24px;
-  border-radius: 30px;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 26px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
     radial-gradient(circle at top right, rgba(120, 225, 214, 0.12), transparent 28%),
@@ -590,13 +590,14 @@ a {
 
 .feature-group__header h3 {
   margin: 14px 0 0;
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
 }
 
 .feature-group__header p {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: var(--text-soft);
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
 .feature-group__tag {
@@ -643,21 +644,21 @@ a {
 
 .feature-group__cards {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .feature-group__cards-super {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .feature-group__cards-free {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .feature-card {
   display: block;
-  padding: 28px;
-  border-radius: 26px;
+  padding: 22px;
+  border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(12, 66, 64, 0.82), rgba(8, 44, 44, 0.76)),
     radial-gradient(circle at top right, rgba(135, 223, 230, 0.14), transparent 32%);
@@ -674,8 +675,8 @@ a {
 
 .feature-index {
   display: inline-flex;
-  margin-bottom: 18px;
-  padding: 8px 12px;
+  margin-bottom: 14px;
+  padding: 7px 11px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: var(--cyan-soft);
@@ -683,19 +684,22 @@ a {
 }
 
 .feature-card h3 {
-  font-size: 1.55rem;
+  font-size: 1.32rem;
+  line-height: 1.2;
 }
 
 .feature-card p {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   color: var(--text-soft);
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
 .feature-card__link {
   display: inline-flex;
-  margin-top: 18px;
+  margin-top: 14px;
   color: var(--cyan-soft);
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   word-break: break-word;
@@ -711,8 +715,8 @@ a {
 
 .feature-card-nls__visual {
   position: relative;
-  min-height: 236px;
-  padding: 16px;
+  min-height: 194px;
+  padding: 12px;
   background:
     radial-gradient(circle at top left, rgba(255, 224, 143, 0.34), transparent 30%),
     radial-gradient(circle at bottom right, rgba(123, 221, 212, 0.24), transparent 36%),
@@ -748,11 +752,11 @@ a {
   z-index: 1;
   display: block;
   width: 100%;
-  min-height: 216px;
-  border-radius: 24px;
+  min-height: 170px;
+  border-radius: 18px;
   object-fit: cover;
   border: 1px solid rgba(111, 192, 255, 0.18);
-  box-shadow: 0 18px 36px rgba(2, 11, 21, 0.28);
+  box-shadow: 0 14px 28px rgba(2, 11, 21, 0.24);
   transition: transform 0.25s ease;
 }
 
@@ -943,32 +947,32 @@ a {
 }
 
 .feature-card-nls__body {
-  padding: 22px 22px 24px;
+  padding: 18px 18px 20px;
 }
 
 .feature-card-nls__pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 8px 16px;
+  min-height: 32px;
+  padding: 7px 13px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0f8b83, #0c6d69);
   color: #f1fffd;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
 .feature-card-nls h3 {
-  margin-top: 18px;
-  font-size: 1.52rem;
+  margin-top: 14px;
+  font-size: 1.28rem;
   letter-spacing: -0.02em;
   line-height: 1.18;
 }
 
 .feature-card-nls p {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 0.94rem;
   color: rgba(244, 252, 251, 0.82);
 }
 
@@ -1074,7 +1078,7 @@ a {
 
 .feature-card-gvcn__visual {
   position: relative;
-  min-height: 222px;
+  min-height: 188px;
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 243, 214, 0.92) 0%, rgba(247, 231, 190, 0.92) 18%, rgba(124, 197, 212, 0.96) 100%);
@@ -1096,7 +1100,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 74px;
+  height: 60px;
   background:
     linear-gradient(180deg, rgba(142, 206, 198, 0.2), rgba(98, 151, 111, 0.46)),
     repeating-linear-gradient(90deg, rgba(90, 61, 38, 0.18), rgba(90, 61, 38, 0.18) 50px, rgba(255, 255, 255, 0.03) 50px, rgba(255, 255, 255, 0.03) 100px);
@@ -1149,7 +1153,9 @@ a {
 .feature-card-gvcn__scene {
   position: relative;
   z-index: 1;
-  min-height: 222px;
+  min-height: 188px;
+  transform: scale(0.88);
+  transform-origin: center bottom;
 }
 
 .feature-card-gvcn__teacher,
@@ -1339,31 +1345,31 @@ a {
 }
 
 .feature-card-gvcn__body {
-  padding: 22px 22px 24px;
+  padding: 18px 18px 20px;
 }
 
 .feature-card-gvcn__pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 8px 16px;
+  min-height: 32px;
+  padding: 7px 13px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0f8b83, #0c6d69);
   color: #f1fffd;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
 .feature-card-gvcn h3 {
-  margin-top: 18px;
-  font-size: 2rem;
+  margin-top: 14px;
+  font-size: 1.42rem;
   letter-spacing: -0.02em;
 }
 
 .feature-card-gvcn p {
   margin-top: 10px;
-  font-size: 1.04rem;
+  font-size: 0.94rem;
   color: rgba(244, 252, 251, 0.82);
 }
 
@@ -1377,8 +1383,8 @@ a {
 
 .feature-card-skkn__visual {
   position: relative;
-  min-height: 256px;
-  padding: 14px;
+  min-height: 214px;
+  padding: 10px;
   background:
     radial-gradient(circle at top right, rgba(104, 243, 227, 0.18), transparent 28%),
     linear-gradient(180deg, #31363b 0%, #262b30 48%, #1a1f23 100%);
@@ -1417,7 +1423,7 @@ a {
 .feature-card-skkn__window {
   position: relative;
   z-index: 1;
-  min-height: 228px;
+  min-height: 194px;
   overflow: hidden;
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1430,16 +1436,16 @@ a {
 .feature-card-skkn__screen {
   position: relative;
   display: grid;
-  gap: 12px;
-  padding: 12px;
+  gap: 9px;
+  padding: 10px;
   background: linear-gradient(180deg, rgba(42, 45, 49, 0.98), rgba(28, 31, 34, 0.98));
 }
 
 .feature-card-skkn__hero {
   display: grid;
   gap: 4px;
-  padding: 14px 16px;
-  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border-radius: 16px;
   background: linear-gradient(180deg, #4b86b4, #24456e);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.14),
@@ -1448,14 +1454,14 @@ a {
 }
 
 .feature-card-skkn__hero strong {
-  font-size: 0.98rem;
+  font-size: 0.84rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
 }
 
 .feature-card-skkn__hero span {
-  font-size: 0.61rem;
+  font-size: 0.52rem;
   color: rgba(236, 244, 255, 0.92);
   line-height: 1.35;
   text-align: center;
@@ -1464,9 +1470,9 @@ a {
 .feature-card-skkn__panel {
   position: relative;
   display: grid;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 18px;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background:
     linear-gradient(180deg, rgba(25, 28, 31, 0.98), rgba(18, 21, 24, 0.98));
@@ -1475,7 +1481,7 @@ a {
 
 .feature-card-skkn__panel-title {
   color: #1ea5ff;
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1489,7 +1495,7 @@ a {
 .feature-card-skkn__row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  gap: 6px;
 }
 
 .feature-card-skkn__row-split {
@@ -1498,7 +1504,7 @@ a {
 
 .feature-card-skkn__label {
   color: rgba(222, 232, 255, 0.86);
-  font-size: 0.54rem;
+  font-size: 0.5rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1506,13 +1512,13 @@ a {
 .feature-card-skkn__input {
   display: flex;
   align-items: center;
-  min-height: 28px;
-  padding: 6px 9px;
+  min-height: 24px;
+  padding: 5px 7px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(36, 40, 44, 0.98), rgba(28, 31, 35, 0.98));
   color: #f4f8ff;
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
@@ -1520,36 +1526,36 @@ a {
 }
 
 .feature-card-skkn__input-wide {
-  min-height: 32px;
+  min-height: 28px;
 }
 
 .feature-card-skkn__body {
-  padding: 22px 22px 24px;
+  padding: 18px 18px 20px;
 }
 
 .feature-card-skkn__pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 8px 16px;
+  min-height: 32px;
+  padding: 7px 13px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0f8b83, #0c6d69);
   color: #f1fffd;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
 .feature-card-skkn h3 {
-  margin-top: 18px;
-  font-size: 1.52rem;
+  margin-top: 14px;
+  font-size: 1.28rem;
   letter-spacing: -0.02em;
   line-height: 1.18;
 }
 
 .feature-card-skkn p {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 0.94rem;
   color: rgba(244, 252, 251, 0.82);
 }
 
@@ -2004,6 +2010,11 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .feature-group__cards-super,
+  .feature-group__cards-free {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
   .contact-banner {
     display: grid;
   }
@@ -2043,6 +2054,25 @@ a {
   .site-nav {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .feature-group {
+    padding: 18px;
+  }
+
+  .feature-group__cards-super,
+  .feature-group__cards-free {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-card {
+    padding: 18px;
+  }
+
+  .feature-card-gvcn,
+  .feature-card-skkn,
+  .feature-card-nls {
+    padding: 0;
   }
 
   .hero-section {
@@ -2114,31 +2144,31 @@ a {
   }
 
   .feature-card-gvcn__visual {
-    min-height: 206px;
+    min-height: 184px;
   }
 
   .feature-card-gvcn h3 {
-    font-size: 1.72rem;
+    font-size: 1.34rem;
   }
 
   .feature-card-skkn__visual {
-    min-height: 232px;
+    min-height: 206px;
   }
 
   .feature-card-skkn h3 {
-    font-size: 1.42rem;
+    font-size: 1.26rem;
   }
 
   .feature-card-nls__visual {
-    min-height: 220px;
+    min-height: 188px;
   }
 
   .feature-card-nls__preview-image {
-    min-height: 200px;
+    min-height: 164px;
   }
 
   .feature-card-nls h3 {
-    font-size: 1.42rem;
+    font-size: 1.24rem;
   }
 
   .stat-card,
@@ -2151,6 +2181,11 @@ a {
 @media (max-width: 560px) {
   :root {
     --header-height: 148px;
+  }
+
+  .feature-group__cards-super,
+  .feature-group__cards-free {
+    grid-template-columns: 1fr;
   }
 
   .brand {
