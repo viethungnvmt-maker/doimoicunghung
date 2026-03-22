@@ -1096,6 +1096,42 @@ a {
   box-shadow: 0 18px 36px rgba(3, 10, 7, 0.34);
 }
 
+.feature-card-rungchuong {
+  background:
+    linear-gradient(180deg, rgba(25, 18, 38, 0.98), rgba(10, 12, 24, 0.98)),
+    radial-gradient(circle at top left, rgba(255, 214, 107, 0.18), transparent 36%);
+}
+
+.feature-card-rungchuong .feature-card-nls__visual {
+  background:
+    radial-gradient(circle at top left, rgba(255, 234, 150, 0.28), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(115, 143, 255, 0.18), transparent 34%),
+    linear-gradient(180deg, #4b267e 0%, #1d2260 52%, #0e1636 100%);
+}
+
+.feature-card-rungchuong__visual--preview {
+  padding: 10px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 221, 108, 0.22), transparent 30%),
+    linear-gradient(180deg, #47208c 0%, #171f59 100%);
+}
+
+.feature-card-rungchuong__visual--preview::before {
+  opacity: 0.16;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 22%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 48px);
+}
+
+.feature-card-rungchuong .feature-card-nls__pill {
+  background: linear-gradient(135deg, #d4a028, #8d5210);
+}
+
+.feature-card-rungchuong .feature-card-nls__preview-image {
+  border-color: rgba(255, 214, 107, 0.24);
+  box-shadow: 0 18px 36px rgba(10, 11, 38, 0.36);
+}
+
 .feature-card-gvcn {
   padding: 0;
   overflow: hidden;
