@@ -1021,6 +1021,79 @@ a {
   transition: transform 0.25s ease;
 }
 
+.feature-card-supervip {
+  background:
+    linear-gradient(180deg, rgba(22, 26, 44, 0.98), rgba(8, 11, 23, 0.98)),
+    radial-gradient(circle at top right, rgba(255, 216, 122, 0.18), transparent 34%);
+}
+
+.feature-card-supervip .feature-card-nls__visual {
+  background:
+    radial-gradient(circle at top left, rgba(255, 219, 116, 0.28), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(111, 192, 255, 0.22), transparent 36%),
+    linear-gradient(180deg, #3654a2 0%, #1a3161 52%, #0d1836 100%);
+}
+
+.feature-card-supervip .feature-card-nls__window {
+  background: linear-gradient(180deg, rgba(14, 26, 52, 0.24), rgba(5, 10, 22, 0.44));
+}
+
+.feature-card-supervip .feature-card-nls__window::after {
+  background: radial-gradient(circle, rgba(255, 223, 130, 0.34), transparent 72%);
+}
+
+.feature-card-supervip .feature-card-nls__badge {
+  background: linear-gradient(135deg, rgba(255, 242, 201, 0.98), rgba(255, 196, 76, 0.98));
+  color: #6a3b00;
+}
+
+.feature-card-supervip .feature-card-nls__sheet-header {
+  background: linear-gradient(135deg, #ffcb53, #f39c12);
+}
+
+.feature-card-supervip .feature-card-nls__sheet-title {
+  background: linear-gradient(90deg, #16345d, #4c88d6);
+}
+
+.feature-card-supervip .feature-card-nls__sheet-line {
+  background: rgba(43, 67, 99, 0.22);
+}
+
+.feature-card-supervip .feature-card-nls__sheet-grid span {
+  background: linear-gradient(180deg, rgba(255, 208, 102, 0.24), rgba(76, 136, 214, 0.14));
+}
+
+.feature-card-supervip .feature-card-nls__avatar {
+  background: linear-gradient(180deg, rgba(255, 204, 104, 0.96), rgba(239, 149, 56, 0.94));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.14),
+    0 18px 30px rgba(17, 25, 44, 0.24),
+    0 0 34px rgba(255, 214, 122, 0.24);
+}
+
+.feature-card-supervip .feature-card-nls__avatar::before {
+  border-color: rgba(255, 233, 170, 0.24);
+  background: radial-gradient(circle, rgba(255, 225, 146, 0.24), transparent 68%);
+}
+
+.feature-card-supervip .feature-card-nls__avatar-core {
+  background: linear-gradient(180deg, #19325e, #0f1d3a);
+  color: #fff4cf;
+}
+
+.feature-card-supervip .feature-card-nls__chips span {
+  background: rgba(9, 16, 32, 0.68);
+}
+
+.feature-card-supervip .feature-card-nls__pill {
+  background: linear-gradient(135deg, #ffc44c, #ef9538);
+  color: #381b00;
+}
+
+.feature-card-supervip .feature-card__link {
+  color: #ffe08f;
+}
+
 .feature-card-cv7991 {
   background:
     linear-gradient(180deg, rgba(28, 24, 18, 0.98), rgba(15, 12, 9, 0.98)),
