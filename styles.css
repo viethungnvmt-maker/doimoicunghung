@@ -2025,6 +2025,97 @@ a {
   transition: transform 0.25s ease;
 }
 
+/* Keep every SUPER VIP badge on cards visually consistent with the same chip treatment. */
+.super-vip-badge {
+  --super-vip-height: 34px;
+  --super-vip-padding-block: 7px;
+  --super-vip-padding-inline: 14px;
+  --super-vip-font-size: 0.78rem;
+  --super-vip-icon-size: 14px;
+  --super-vip-floating-top: 14px;
+  --super-vip-floating-side: 14px;
+}
+
+.super-vip-badge--floating {
+  --super-vip-height: 35px;
+  --super-vip-padding-block: 8px;
+  --super-vip-padding-inline: 13px;
+  --super-vip-font-size: 0.74rem;
+}
+
+.super-vip-badge--inline {
+  --super-vip-padding-inline: 15px;
+  --super-vip-font-size: 0.8rem;
+}
+
+.feature-group__tag-super.super-vip-badge,
+.feature-card-gvcn__vip.super-vip-badge,
+.feature-card-nls__badge.super-vip-badge,
+.feature-card-nls__pill.super-vip-badge,
+.feature-card-skkn__vip.super-vip-badge,
+.feature-card-skkn__pill.super-vip-badge,
+.feature-card-skknall__contact.super-vip-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--super-vip-height);
+  padding: var(--super-vip-padding-block) var(--super-vip-padding-inline);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 212, 135, 0.14);
+  background:
+    radial-gradient(circle at top, rgba(255, 226, 158, 0.16), transparent 62%),
+    linear-gradient(180deg, rgba(168, 114, 25, 0.98), rgba(122, 80, 13, 0.98));
+  color: #ffe0a1;
+  font-size: var(--super-vip-font-size);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: none;
+  white-space: nowrap;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 230, 0.12),
+    0 10px 20px rgba(27, 14, 1, 0.22);
+}
+
+.super-vip-badge::before {
+  content: "";
+  width: var(--super-vip-icon-size);
+  height: var(--super-vip-icon-size);
+  flex: 0 0 var(--super-vip-icon-size);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5.1 3.2h9.8l3.4 4.5L10 17 1.7 7.7 5.1 3.2Z' fill='%23F9C95C'/%3E%3Cpath d='M5.1 3.2 10 7.7l4.9-4.5M1.7 7.7h16.6M5.1 3.2l1.8 4.5m8-4.5-1.8 4.5M10 7.7V17' stroke='%238B5406' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.feature-card-gvcn__vip.super-vip-badge,
+.feature-card-skkn__vip.super-vip-badge,
+.feature-card-skknall__contact.super-vip-badge {
+  position: absolute;
+  top: var(--super-vip-floating-top);
+  right: var(--super-vip-floating-side);
+  z-index: 3;
+}
+
+.feature-card-nls__badge.super-vip-badge {
+  position: absolute;
+  top: var(--super-vip-floating-top);
+  left: var(--super-vip-floating-side);
+  z-index: 3;
+}
+
+.feature-card-nls__badge.super-vip-badge,
+.feature-card-gvcn__vip.super-vip-badge,
+.feature-card-skkn__vip.super-vip-badge {
+  max-width: calc(100% - 28px);
+}
+
+.feature-card-skknall__contact.super-vip-badge {
+  max-width: calc(100% - 84px);
+}
+
 .contact-banner {
   display: flex;
   justify-content: space-between;
@@ -2749,6 +2840,26 @@ a {
     font-size: 1.48rem;
   }
 
+  .super-vip-badge {
+    --super-vip-padding-inline: 13px;
+    --super-vip-font-size: 0.76rem;
+    --super-vip-icon-size: 13px;
+  }
+
+  .super-vip-badge--floating {
+    --super-vip-height: 34px;
+    --super-vip-padding-block: 7px;
+    --super-vip-padding-inline: 12px;
+    --super-vip-font-size: 0.7rem;
+    --super-vip-floating-top: 10px;
+    --super-vip-floating-side: 12px;
+  }
+
+  .super-vip-badge--inline {
+    --super-vip-padding-inline: 14px;
+    --super-vip-font-size: 0.78rem;
+  }
+
   .feature-card-nls__preview-image {
     height: calc(var(--feature-card-visual-height) - 20px);
     min-height: 0;
@@ -2853,9 +2964,7 @@ a {
   }
 
   .feature-card-skknall__contact {
-    min-height: 32px;
-    padding: 7px 12px;
-    font-size: 0.62rem;
+    max-width: calc(100% - 72px);
   }
 
   .feature-card-skknall__icon {
