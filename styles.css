@@ -2102,7 +2102,8 @@ a {
 .feature-card-nls__badge.super-vip-badge {
   position: absolute;
   top: var(--super-vip-floating-top);
-  left: var(--super-vip-floating-side);
+  right: var(--super-vip-floating-side);
+  left: auto;
   z-index: 3;
 }
 
@@ -2114,6 +2115,13 @@ a {
 
 .feature-card-skknall__contact.super-vip-badge {
   max-width: calc(100% - 84px);
+}
+
+.feature-card-nls__pill.super-vip-badge,
+.feature-card-skkn__pill.super-vip-badge {
+  align-self: flex-end;
+  width: auto;
+  max-width: 100%;
 }
 
 .contact-banner {
